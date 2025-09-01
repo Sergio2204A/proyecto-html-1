@@ -76,3 +76,5 @@ Copiar código
 2. Si estás usando GitHub, el archivo se mostrará automáticamente como portada de tu repositorio.
 3. Puedes modificarlo con Markdown Preview si usas VS Code (`Ctrl+Shift+V`).
 
+## netlify 
+https://comforting-granita-0c4f15.netlify.app/
