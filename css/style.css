@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: #333;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 320px;
+  background: #1e1e2f;
+  color: white;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 5px solid #2575fc;
+  margin-bottom: 20px;
+}
+
+.sidebar h1 {
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.sidebar p {
+  font-size: 14px;
+  color: #bbb;
+  margin-bottom: 25px;
+}
+
+.sidebar ul {
+  list-style: none;
+  width: 100%;
+}
+
+.sidebar ul li {
+  padding: 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  font-size: 14px;
+}
+
+.highlight {
+  color: #6a11cb;
+  font-weight: bold;
+}
+
+/* Main content */
+.main {
+  flex: 1;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+/* Cards */
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 22px rgba(0,0,0,0.25);
+}
+
+.card h2 {
+  color: #2575fc;
+  margin-bottom: 15px;
+  border-left: 5px solid #6a11cb;
+  padding-left: 10px;
+  font-size: 20px;
+}
+
+.card ul {
+  list-style: none;
+}
+
+.card ul li {
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+/* Skills */
+.skills span {
+  display: inline-block;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin: 5px 5px 0 0;
+  font-size: 14px;
+}
+
+/* Video responsivo */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.video-container iframe,
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+/* Footer */
+footer {
+  grid-column: 1/-1;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  body {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .sidebar img {
+    width: 80px;
+    height: 80px;
+  }
+}
